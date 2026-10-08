@@ -576,37 +576,6 @@ p.lede {
 
 .ueberuns__media-inset img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
 
-.ueberuns__stat {
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  z-index: 2;
-  background: var(--color-ink);
-  color: var(--color-cream);
-  padding: 1rem 1.3rem;
-  font-family: var(--font-display);
-  line-height: 1.1;
-  box-shadow: 0 14px 30px rgba(19, 17, 23, 0.25);
-}
-
-@media (min-width: 540px) {
-  .ueberuns__stat { left: -1.5rem; top: 1.75rem; padding: 1.3rem 1.6rem; }
-}
-
-.ueberuns__stat strong {
-  display: block;
-  font-size: 1.8rem;
-  font-weight: 500;
-}
-
-.ueberuns__stat span {
-  font-family: var(--font-text);
-  font-size: 0.62rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(244, 239, 230, 0.75);
-}
-
 /* ---------- Leistungen: Bento-Grid ---------- */
 .bento {
   display: grid;
@@ -857,44 +826,49 @@ p.lede {
 }
 
 /* ---------- Bewertungen ---------- */
+.section--compact { padding-block: clamp(2rem, 4vw, 3.25rem); }
+
+.bewertungen-headline {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  margin-top: 0.5em;
+}
+
 .bewertung-banner {
   display: grid;
-  gap: 2.5rem;
-  margin-top: 2.5rem;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
   align-items: center;
 }
 
 @media (min-width: 860px) {
-  .bewertung-banner { grid-template-columns: auto 1fr; gap: 4.5rem; }
+  .bewertung-banner { grid-template-columns: auto 1fr; gap: 3rem; }
 }
 
 .bewertung-score {
   display: flex;
-  align-items: flex-start;
-  gap: 0.4rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
 .bewertung-score__num {
   font-family: var(--font-display);
-  font-size: clamp(5rem, 14vw, 8.5rem);
-  line-height: 0.85;
+  font-size: clamp(1.9rem, 2.6vw, 2.3rem);
+  line-height: 1;
   color: var(--color-white);
-  font-weight: 420;
+  font-weight: 460;
 }
 
-.bewertung-score__meta { padding-top: 0.6rem; }
+.bewertung-score .stars { font-size: 1.05rem; }
 
-.bewertung-score__meta .stars { font-size: 1.3rem; display: block; }
-
-.bewertung-score__meta p {
-  margin-top: 0.5rem;
-  font-size: 0.88rem;
-  color: rgba(244, 239, 230, 0.75);
-  max-width: 24ch;
+.bewertung-score__label {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: rgba(244, 239, 230, 0.68);
 }
 
-.bewertung-text p { color: rgba(244, 239, 230, 0.82); max-width: 50ch; }
-.bewertung-text .btn { margin-top: 1.5rem; }
+.bewertung-text p { color: rgba(244, 239, 230, 0.82); max-width: 50ch; font-size: 0.95rem; }
+.bewertung-text .btn { margin-top: 1.1rem; }
 
 /* ---------- Kontakt ---------- */
 .kontakt {
